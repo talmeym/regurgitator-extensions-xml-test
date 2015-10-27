@@ -18,11 +18,6 @@ public class XmlSchemaValidatorXmlLoaderTest extends XmlBaseTest {
 		assertExpectation(getElement("classpath:/XmlSchemaValidator.xml"), "com.emarte.regurgitator.extensions.XmlSchemaValidator:['classpath:/something.something.file']");
 	}
 
-	@Test
-	public void testMinimumXml() throws Exception {
-		assertExpectation(getElement("classpath:/XmlSchemaValidator_min.xml"), "com.emarte.regurgitator.extensions.XmlSchemaValidator:['classpath:/something.something.file']");
-	}
-
 	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
 		assertEquals(expected, toTest.load(element, new HashSet<Object>()).toString());
 	}

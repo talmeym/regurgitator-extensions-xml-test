@@ -3,8 +3,7 @@
 							   xmlns:rge="http://extensions.regurgitator.emarte.com"
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd">
-	<rge:xpath-processor>
-		<rge:xpath>something.something</rge:xpath>
+	<rge:xpath-processor xpath="something.something">
 		<rge:namespaces>
 			<rge:namespace prefix="prefix" uri="uri"/>
 		</rge:namespaces>
