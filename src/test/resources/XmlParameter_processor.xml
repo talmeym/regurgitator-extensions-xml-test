@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
 							   xmlns:rge="http://extensions.regurgitator.emarte.com"
-							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							   xmlns:rcct="http://stuff.test.regurgitator.emarte.com"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rge:json-parameter id="build-param-1" name="toTest1" source="context:location" json-path="$.something">
-		<rgcct:test-value-processor-2/>
-	</rge:json-parameter>
+	<rge:xml-parameter name="name" source="location" id="xml-parameter-1" xpath="xpath/xpath">
+		<rge:namespaces>
+			<rge:namespace prefix="prefix1" uri="uri1"/>
+			<rge:namespace prefix="prefix2" uri="uri2"/>
+		</rge:namespaces>
+		<rcct:test-value-processor/>
+	</rge:xml-parameter>
 </rg:regurgitator-configuration>
