@@ -15,17 +15,17 @@ public class VelocityBuilderXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testXml_source() throws Exception {
-		assertExpectation(getElement("classpath:/VelocityBuilder_source.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]");
+		assertExpectation(getElement("classpath:/VelocityBuilder_source.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]]");
 	}
 
 	@Test
 	public void testXml_value() throws Exception {
-		assertExpectation(getElement("classpath:/VelocityBuilder_value.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[null,'something something']");
+		assertExpectation(getElement("classpath:/VelocityBuilder_value.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
 	}
 
 	@Test
 	public void testXml_file() throws Exception {
-		assertExpectation(getElement("classpath:/VelocityBuilder_file.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[null,'something something']");
+		assertExpectation(getElement("classpath:/VelocityBuilder_file.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
 	}
 
 	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
