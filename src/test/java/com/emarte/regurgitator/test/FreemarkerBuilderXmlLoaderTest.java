@@ -24,6 +24,11 @@ public class FreemarkerBuilderXmlLoaderTest extends XmlBaseTest {
 	}
 
 	@Test
+	public void testXml_value_attr() throws Exception {
+		assertExpectation(getElement("classpath:/FreemarkerBuilder_value_attr.xml"), "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
+	}
+
+	@Test
 	public void testXml_file() throws Exception {
 		assertExpectation(getElement("classpath:/FreemarkerBuilder_file.xml"), "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
 	}
