@@ -25,7 +25,7 @@ public class VelocityBuilderXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testXml_value_attr() throws Exception {
-		assertExpectation(getElement("classpath:/VelocityBuilder_value_attr.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
+		assertExpectation(getElement("classpath:/VelocityBuilder_valueAttr.xml"), "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something']]");
 	}
 
 	@Test
