@@ -1,7 +1,10 @@
 package com.emarte.regurgitator.test;
 
+import com.emarte.regurgitator.core.*;
 import com.emarte.regurgitator.extensions.FreemarkerProcessorXmlLoader;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
 public class FreemarkerProcessorXmlLoaderTest extends XmlLoaderTest {
 	public FreemarkerProcessorXmlLoaderTest() {
@@ -16,5 +19,10 @@ public class FreemarkerProcessorXmlLoaderTest extends XmlLoaderTest {
 	@Test
 	public void testXml_file() throws Exception {
 		assertExpectation("classpath:/FreemarkerProcessor_file.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['something something']");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/FreemarkerProcessor_fullLoad.xml");
 	}
 }

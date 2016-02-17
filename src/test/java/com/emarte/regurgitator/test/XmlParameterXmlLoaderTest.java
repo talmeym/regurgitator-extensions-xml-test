@@ -4,6 +4,8 @@ import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.XmlParameterXmlLoader;
 import org.junit.Test;
 
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+
 public class XmlParameterXmlLoaderTest extends XmlLoaderTest {
 	public XmlParameterXmlLoaderTest() {
 		super(new XmlParameterXmlLoader());
@@ -32,5 +34,10 @@ public class XmlParameterXmlLoaderTest extends XmlLoaderTest {
 	@Test(expected = RegurgitatorException.class)
 	public void testInvalidXmlMissingProcessorClass() throws Exception {
 		loadFromFile("classpath:/XmlParameter_missingProcessorClass.xml");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/XmlParameter.xml");
 	}
 }

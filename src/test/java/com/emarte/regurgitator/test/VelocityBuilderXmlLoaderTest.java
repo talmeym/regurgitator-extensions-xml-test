@@ -1,7 +1,10 @@
 package com.emarte.regurgitator.test;
 
+import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.VelocityBuilderXmlLoader;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
 public class VelocityBuilderXmlLoaderTest extends XmlLoaderTest {
 	public VelocityBuilderXmlLoaderTest() {
@@ -31,5 +34,10 @@ public class VelocityBuilderXmlLoaderTest extends XmlLoaderTest {
 	@Test
 	public void testXml_file() throws Exception {
 		assertExpectation("classpath:/VelocityBuilder_file.xml", "com.emarte.regurgitator.extensions.VelocityBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something'],false]");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/VelocityBuilder_fullLoad.xml");
 	}
 }

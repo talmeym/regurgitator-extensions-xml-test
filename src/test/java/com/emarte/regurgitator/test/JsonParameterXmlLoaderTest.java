@@ -4,6 +4,8 @@ import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.JsonParameterXmlLoader;
 import org.junit.Test;
 
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+
 public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
 	public JsonParameterXmlLoaderTest() {
 		super(new JsonParameterXmlLoader());
@@ -17,5 +19,10 @@ public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
 	@Test(expected = RegurgitatorException.class)
 	public void testInvalidXmlMissingProcessorClass() throws Exception {
 		loadFromFile("classpath:/JsonParameter_missingProcessorClass.xml");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/JsonParameter.xml");
 	}
 }

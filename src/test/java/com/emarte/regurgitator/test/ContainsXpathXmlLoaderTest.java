@@ -1,12 +1,14 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.*;
 import com.emarte.regurgitator.extensions.ContainsXpathXmlLoader;
 import org.dom4j.DocumentException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
 public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 	public ContainsXpathXmlLoaderTest() {
@@ -16,5 +18,10 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 	@Test
 	public void testXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
 		assertExpectation("classpath:/ContainsXpath.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{this=http://something.com}]");
+	}
+
+	@Test
+	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		loadFile("classpath:/ContainsXpath_fullLoad.xml");
 	}
 }

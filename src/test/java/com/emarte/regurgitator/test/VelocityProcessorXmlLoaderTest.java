@@ -1,7 +1,10 @@
 package com.emarte.regurgitator.test;
 
+import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.VelocityProcessorXmlLoader;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
 public class VelocityProcessorXmlLoaderTest extends XmlLoaderTest {
 	public VelocityProcessorXmlLoaderTest() {
@@ -16,5 +19,10 @@ public class VelocityProcessorXmlLoaderTest extends XmlLoaderTest {
 	@Test
 	public void testXml_file() throws Exception {
 		assertExpectation("classpath:/VelocityProcessor_file.xml", "com.emarte.regurgitator.extensions.VelocityProcessor:['something something']");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/VelocityProcessor_fullLoad.xml");
 	}
 }
