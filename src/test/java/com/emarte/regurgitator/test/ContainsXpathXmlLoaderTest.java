@@ -16,8 +16,13 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 	}
 
 	@Test
-	public void testXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/ContainsXpath.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{this=http://something.com}]");
+	public void testMinXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		assertExpectation("classpath:/ContainsXpath_min.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{}]");
+	}
+
+	@Test
+	public void testMaxXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		assertExpectation("classpath:/ContainsXpath_max.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{this=http://something.com}]");
 	}
 
 	@Test
