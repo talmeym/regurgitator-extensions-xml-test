@@ -29,4 +29,9 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
 		loadFile("classpath:/ContainsXpath_fullLoad.xml");
 	}
+
+	@Test
+	public void testFullLoad_entityLookup() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		loadFile("classpath:/ContainsXpath_fullLoad_entityLookup.xml");
+	}
 }
