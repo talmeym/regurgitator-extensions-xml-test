@@ -1,6 +1,6 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.ContainsXpathXmlLoader;
 import org.dom4j.DocumentException;
 import org.junit.Test;
