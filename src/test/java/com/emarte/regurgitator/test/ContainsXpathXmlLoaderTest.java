@@ -1,12 +1,7 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.ContainsXpathXmlLoader;
-import org.dom4j.DocumentException;
 import org.junit.Test;
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
@@ -16,22 +11,22 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 	}
 
 	@Test
-	public void testMinXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
+	public void testMinXml() throws Exception {
 		assertExpectation("classpath:/ContainsXpath_min.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{}]");
 	}
 
 	@Test
-	public void testMaxXml() throws DocumentException, SAXException, IOException, RegurgitatorException {
+	public void testMaxXml() throws Exception {
 		assertExpectation("classpath:/ContainsXpath_max.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{this=http://something.com}]");
 	}
 
 	@Test
-	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
+	public void testFullLoad() throws Exception {
 		loadFile("classpath:/ContainsXpath_fullLoad.xml");
 	}
 
 	@Test
-	public void testFullLoad_entityLookup() throws DocumentException, SAXException, IOException, RegurgitatorException {
+	public void testFullLoad_entityLookup() throws Exception {
 		loadFile("classpath:/ContainsXpath_fullLoad_entityLookup.xml");
 	}
 }
