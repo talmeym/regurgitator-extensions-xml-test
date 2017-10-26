@@ -17,7 +17,12 @@ public class FreemarkerProcessorXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testXml_value() throws Exception {
-        assertExpectation("classpath:/FreemarkerProcessor_value.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['something something']");
+        assertExpectation("classpath:/FreemarkerProcessor_value.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['<something>${something}</something>']");
+    }
+
+    @Test
+    public void testXml_value_attr() throws Exception {
+        assertExpectation("classpath:/FreemarkerProcessor_valueAttr.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['<something>${something}</something>']");
     }
 
     @Test
