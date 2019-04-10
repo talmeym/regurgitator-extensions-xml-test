@@ -10,5 +10,6 @@
             <rge:namespace prefix="prefix2" uri="uri2"/>
         </rge:namespaces>
         <rgcct:test-value-processor/>
+        <rgcct:test-value-processor/>
     </rge:xml-parameter>
 </rg:regurgitator-configuration>

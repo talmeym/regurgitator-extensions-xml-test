@@ -32,6 +32,11 @@ public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/JsonParameter_multipleProcessors.xml", JsonParameter_multipleProcessors);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/JsonParameter_min.xml");
     }
