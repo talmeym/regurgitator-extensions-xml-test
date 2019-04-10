@@ -3,5 +3,5 @@
                                xmlns:rge="http://extensions.regurgitator.emarte.com"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd">
-    <rge:xpath-processor xpath="something.something" namespaces="prefix=uri"/>
+    <rge:xpath-processor xpath="xpath/xpath" namespaces="prefix1=uri1,prefix2=uri2"/>
 </rg:regurgitator-configuration>

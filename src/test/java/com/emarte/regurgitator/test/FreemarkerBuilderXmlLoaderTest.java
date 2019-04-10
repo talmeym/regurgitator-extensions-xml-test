@@ -4,11 +4,11 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.FreemarkerBuilderXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.*;
 
 public class FreemarkerBuilderXmlLoaderTest extends XmlLoaderTest {
     public FreemarkerBuilderXmlLoaderTest() {
@@ -16,32 +16,32 @@ public class FreemarkerBuilderXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testXml_source() throws Exception {
-        assertExpectation("classpath:/FreemarkerBuilder_source.xml", "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/FreemarkerBuilder_value.xml", FreemarkerBuilder_value);
     }
 
     @Test
-    public void testXml_value() throws Exception {
-        assertExpectation("classpath:/FreemarkerBuilder_value.xml", "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'<something>${something}</something>'],false]");
+    public void testValueFlat() throws Exception {
+        assertExpectation("classpath:/FreemarkerBuilder_valueFlat.xml", FreemarkerBuilder_valueFlat);
     }
 
     @Test
-    public void testXml_allContexts() throws Exception {
-        assertExpectation("classpath:/FreemarkerBuilder_allContexts.xml", "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something'],true]");
+    public void testFile() throws Exception {
+        assertExpectation("classpath:/FreemarkerBuilder_file.xml", FreemarkerBuilder_file);
     }
 
     @Test
-    public void testXml_value_attr() throws Exception {
-        assertExpectation("classpath:/FreemarkerBuilder_valueAttr.xml", "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'<something>${something}</something>'],false]");
+    public void testSource() throws Exception {
+        assertExpectation("classpath:/FreemarkerBuilder_source.xml", FreemarkerBuilder_source);
     }
 
     @Test
-    public void testXml_file() throws Exception {
-        assertExpectation("classpath:/FreemarkerBuilder_file.xml", "com.emarte.regurgitator.extensions.FreemarkerBuilder:[com.emarte.regurgitator.core.ValueSource:[null,'something something'],false]");
+    public void testAllContexts() throws Exception {
+        assertExpectation("classpath:/FreemarkerBuilder_allContexts.xml", FreemarkerBuilder_allContexts);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/FreemarkerBuilder_fullLoad.xml");
     }
 }

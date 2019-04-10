@@ -4,7 +4,7 @@
                                xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-    <rge:xml-parameter name="name" source="location" id="xml-parameter-1" xpath="xpath/xpath" namespaces="prefix1=uri1,prefix2=uri2">
+    <rge:json-parameter name="context:name" source="context:location" type="NUMBER" id="json-parameter-1" merge="LEAVE" json-path="jsonpath.jsonpath">
         <rgcct:test-value-processor/>
-    </rge:xml-parameter>
+    </rge:json-parameter>
 </rg:regurgitator-configuration>

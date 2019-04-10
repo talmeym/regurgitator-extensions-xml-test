@@ -7,7 +7,7 @@ package com.emarte.regurgitator.test;
 import com.emarte.regurgitator.extensions.ContainsXpathXmlLoader;
 import org.junit.Test;
 
-import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.*;
 
 public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
     public ContainsXpathXmlLoaderTest() {
@@ -15,22 +15,22 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testMinXml() throws Exception {
-        assertExpectation("classpath:/ContainsXpath_min.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{}]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/ContainsXpath_min.xml", ContainsXpath_min);
     }
 
     @Test
-    public void testMaxXml() throws Exception {
-        assertExpectation("classpath:/ContainsXpath_max.xml", "com.emarte.regurgitator.extensions.ContainsXpath:[{this=http://something.com}]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/ContainsXpath_max.xml", ContainsXpath_max);
     }
 
     @Test
     public void testFullLoad() throws Exception {
-        loadFile("classpath:/ContainsXpath_fullLoad.xml");
+        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad.xml", ContainsXpath_fullLoad);
     }
 
     @Test
     public void testFullLoad_entityLookup() throws Exception {
-        loadFile("classpath:/ContainsXpath_fullLoad_entityLookup.xml");
+        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad_entityLookup.xml", ContainsXpath_fullLoad_entityLookup);
     }
 }

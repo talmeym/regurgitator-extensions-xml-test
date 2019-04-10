@@ -4,11 +4,12 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.VelocityProcessorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_file;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_value;
 
 public class VelocityProcessorXmlLoaderTest extends XmlLoaderTest {
     public VelocityProcessorXmlLoaderTest() {
@@ -16,17 +17,17 @@ public class VelocityProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testXml_value() throws Exception {
-        assertExpectation("classpath:/VelocityProcessor_value.xml", "com.emarte.regurgitator.extensions.VelocityProcessor:['something something']");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/VelocityProcessor_value.xml", VelocityProcessor_value);
     }
 
     @Test
-    public void testXml_file() throws Exception {
-        assertExpectation("classpath:/VelocityProcessor_file.xml", "com.emarte.regurgitator.extensions.VelocityProcessor:['something something']");
+    public void testFile() throws Exception {
+        assertExpectation("classpath:/VelocityProcessor_file.xml", VelocityProcessor_file);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/VelocityProcessor_fullLoad.xml");
     }
 }

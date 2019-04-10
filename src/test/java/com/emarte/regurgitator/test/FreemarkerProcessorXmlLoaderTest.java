@@ -4,11 +4,11 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.FreemarkerProcessorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.*;
 
 public class FreemarkerProcessorXmlLoaderTest extends XmlLoaderTest {
     public FreemarkerProcessorXmlLoaderTest() {
@@ -16,22 +16,22 @@ public class FreemarkerProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testXml_value() throws Exception {
-        assertExpectation("classpath:/FreemarkerProcessor_value.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['<something>${something}</something>']");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/FreemarkerProcessor_value.xml", FreemarkerProcessor_value);
     }
 
     @Test
-    public void testXml_value_attr() throws Exception {
-        assertExpectation("classpath:/FreemarkerProcessor_valueAttr.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['<something>${something}</something>']");
+    public void testValueFlat() throws Exception {
+        assertExpectation("classpath:/FreemarkerProcessor_valueFlat.xml", FreemarkerProcessor_valueFlat);
     }
 
     @Test
-    public void testXml_file() throws Exception {
-        assertExpectation("classpath:/FreemarkerProcessor_file.xml", "com.emarte.regurgitator.extensions.FreemarkerProcessor:['something something']");
+    public void testFile() throws Exception {
+        assertExpectation("classpath:/FreemarkerProcessor_file.xml", FreemarkerProcessor_file);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/FreemarkerProcessor_fullLoad.xml");
     }
 }

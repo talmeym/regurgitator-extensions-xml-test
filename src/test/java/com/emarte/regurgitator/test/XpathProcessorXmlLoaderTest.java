@@ -4,11 +4,12 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.XpathProcessorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.XpathProcessor_max;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.XpathProcessor_min;
 
 public class XpathProcessorXmlLoaderTest extends XmlLoaderTest {
     public XpathProcessorXmlLoaderTest() {
@@ -16,17 +17,17 @@ public class XpathProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testXml() throws Exception {
-        assertExpectation("classpath:/XpathProcessor.xml", "com.emarte.regurgitator.extensions.XpathProcessor:['something.something',{prefix=uri}]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/XpathProcessor_min.xml", XpathProcessor_min);
     }
 
     @Test
-    public void testMinimumXml() throws Exception {
-        assertExpectation("classpath:/XpathProcessor_min.xml", "com.emarte.regurgitator.extensions.XpathProcessor:['something.something',{prefix=uri}]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/XpathProcessor_max.xml", XpathProcessor_max);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/XpathProcessor_fullLoad.xml");
     }
 }

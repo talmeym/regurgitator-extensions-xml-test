@@ -9,6 +9,7 @@ import com.emarte.regurgitator.extensions.JsonParameterXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.*;
 
 public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
     public JsonParameterXmlLoaderTest() {
@@ -16,17 +17,27 @@ public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testXml() throws Exception {
-        assertExpectation("classpath:/JsonParameter.xml", "com.emarte.regurgitator.extensions.JsonParameter:['json-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['location'],null],com.emarte.regurgitator.extensions.JsonPathProcessor:['jsonpath.jsonpath'],null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/JsonParameter_min.xml", JsonParameter_min);
+    }
+
+    @Test
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/JsonParameter_max.xml", JsonParameter_max);
+    }
+
+    @Test
+    public void testMaximumFlat() throws Exception {
+        assertExpectation("classpath:/JsonParameter_maxFlat.xml", JsonParameter_maxFlat);
+    }
+
+    @Test
+    public void testFullLoad() throws Exception {
+        loadFile("classpath:/JsonParameter_min.xml");
     }
 
     @Test(expected = RegurgitatorException.class)
     public void testInvalidXmlMissingProcessorClass() throws Exception {
         loadFromFile("classpath:/JsonParameter_missingProcessorClass.xml");
-    }
-
-    @Test
-    public void testFullLoad() throws RegurgitatorException {
-        loadFile("classpath:/JsonParameter.xml");
     }
 }

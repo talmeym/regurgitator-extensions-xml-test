@@ -11,7 +11,7 @@
         <rg:rules>
             <rg:rule id="rule-1" step="test-step-1">
                 <rg:condition id="condition-1" source="context:location">
-                    <rge:contains-xpath>/something/something</rge:contains-xpath>
+                    <rge:contains-xpath namespaces="prefix1=url1,prefix2=url2">/something/something</rge:contains-xpath>
                 </rg:condition>
             </rg:rule>
         </rg:rules>

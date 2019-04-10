@@ -3,5 +3,5 @@
                                xmlns:rge="http://extensions.regurgitator.emarte.com"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd">
-    <rge:freemarker-processor><![CDATA[<something>${something}</something>]]></rge:freemarker-processor>
+    <rge:freemarker-processor>{&quot;something&quot;:&quot;${something}&quot;}</rge:freemarker-processor>
 </rg:regurgitator-configuration>
