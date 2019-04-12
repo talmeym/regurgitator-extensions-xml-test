@@ -37,6 +37,11 @@ public class XmlParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/XmlParameter_multipleProcessorsFlat.xml", XmlParameter_multipleProcessorsFlat);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/XmlParameter_max.xml");
     }
