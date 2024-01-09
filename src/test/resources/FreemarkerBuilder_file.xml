@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-                               xmlns:rge="http://extensions.regurgitator.emarte.com"
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.uk"
+                               xmlns:rge="http://extensions.regurgitator.emarte.uk"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://extensions.regurgitator.emarte.com regurgitatorExtensions.xsd">
+                               xsi:schemaLocation="http://core.regurgitator.emarte.uk regurgitatorCore.xsd http://extensions.regurgitator.emarte.uk regurgitatorExtensions.xsd">
     <rge:freemarker-builder file="classpath:/something.something.file"/>
 </rg:regurgitator-configuration>

@@ -2,13 +2,13 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.test;
+package uk.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.extensions.JsonPrintProcessorXmlLoader;
+import uk.emarte.regurgitator.extensions.JsonPrintProcessorXmlLoader;
 import org.junit.Test;
 
-import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPrintProcessor;
-import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPrintProcessor_fullLoad;
+import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPrintProcessor;
+import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPrintProcessor_fullLoad;
 
 public class JsonPrintProcessorXmlLoaderTest extends XmlLoaderTest {
     public JsonPrintProcessorXmlLoaderTest() {
