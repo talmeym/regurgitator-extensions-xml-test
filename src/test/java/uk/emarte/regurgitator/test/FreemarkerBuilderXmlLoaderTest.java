@@ -4,8 +4,8 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.extensions.FreemarkerBuilderXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.FreemarkerBuilderXmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.*;

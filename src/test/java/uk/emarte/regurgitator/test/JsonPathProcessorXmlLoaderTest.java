@@ -4,8 +4,8 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.extensions.JsonPathProcessorXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.JsonPathProcessorXmlLoader;
 
 import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPathProcessor;
 import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.JsonPathProcessor_fullLoad;
