@@ -2,11 +2,11 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.test;
+package uk.emarte.regurgitator.test;
 
 import org.junit.Test;
 
-import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.ContainsJsonPathBehaviour_fullLoad;
+import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.ContainsJsonPathBehaviour_fullLoad;
 
 public class ContainsJsonPathBehaviourXmlLoaderTest extends XmlLoaderTest {
     public ContainsJsonPathBehaviourXmlLoaderTest() {
