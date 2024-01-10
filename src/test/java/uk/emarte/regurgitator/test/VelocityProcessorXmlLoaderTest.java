@@ -2,14 +2,14 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.test;
+package uk.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.extensions.VelocityProcessorXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.VelocityProcessorXmlLoader;
 
-import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_file;
-import static com.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_value;
+import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_file;
+import static uk.emarte.regurgitator.test.ExtensionsLoaderTestExpectations.VelocityProcessor_value;
 
 public class VelocityProcessorXmlLoaderTest extends XmlLoaderTest {
     public VelocityProcessorXmlLoaderTest() {
