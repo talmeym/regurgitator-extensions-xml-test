@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.uk"
-                               xmlns:rge="http://extensions.regurgitator.emarte.uk"
-                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                               xsi:schemaLocation="http://core.regurgitator.emarte.uk regurgitatorCore.xsd http://extensions.regurgitator.emarte.uk regurgitatorExtensions.xsd" id="regurgitator-configuration-1">
-    <rg:build-parameter name="name">
-        <rge:velocity-builder>something something</rge:velocity-builder>
-    </rg:build-parameter>
-</rg:regurgitator-configuration>
