@@ -16,7 +16,7 @@ public class XmlSchemaValidatorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/XmlSchemaValidator.xml", XmlSchemaValidator);
     }
 
