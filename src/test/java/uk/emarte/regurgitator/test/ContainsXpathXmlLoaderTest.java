@@ -16,21 +16,21 @@ public class ContainsXpathXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testMinimum() throws Exception {
-        assertExpectation("classpath:/ContainsXpath_min.xml", ContainsXpath_min);
+        assertExpectation("classpath:/ContainsXpath_min.xml", ContainsXpathBehaviour_min);
     }
 
     @Test
     public void testMaximum() throws Exception {
-        assertExpectation("classpath:/ContainsXpath_max.xml", ContainsXpath_max);
+        assertExpectation("classpath:/ContainsXpath_max.xml", ContainsXpathBehaviour_max);
     }
 
     @Test
     public void testFullLoad() throws Exception {
-        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad.xml", ContainsXpath_fullLoad);
+        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad.xml", ContainsXpathBehaviour_fullLoad);
     }
 
     @Test
     public void testFullLoad_entityLookup() throws Exception {
-        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad_entityLookup.xml", ContainsXpath_fullLoad_entityLookup);
+        assertExpectationFullLoad("classpath:/ContainsXpath_fullLoad_entityLookup.xml", ContainsXpathBehaviour_fullLoad_entityLookup);
     }
 }
