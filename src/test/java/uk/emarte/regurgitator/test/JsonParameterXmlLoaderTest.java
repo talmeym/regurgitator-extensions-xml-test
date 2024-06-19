@@ -22,6 +22,11 @@ public class JsonParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
+    public void testMinimumOptional() throws Exception {
+        assertExpectation("classpath:/JsonParameter_min_optional.xml", JsonParameter_min_optional);
+    }
+
+    @Test
     public void testMaximum() throws Exception {
         assertExpectation("classpath:/JsonParameter_max.xml", JsonParameter_max);
     }
